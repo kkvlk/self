@@ -1,0 +1,4 @@
+#!/bin/sh
+
+PORT=${PORT:-5000}
+exec twistd -n web -p $PORT --path ./public
