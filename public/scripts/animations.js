@@ -65,4 +65,12 @@ $(function() {
       }
     }
   }
+
+  // On Webkit, the animations and gradually slow down over time. Apparently,
+  // it gets fixed if we pause, and resume animation every now and then.
+  setInterval(function() {
+    var $toggler = $("a.toggle[data-toggle='animation']")
+    $toggler.click();
+    $toggler.click();
+  }, 1000);
 });
