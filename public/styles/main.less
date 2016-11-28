@@ -37,12 +37,28 @@ body {
 #overlay-1 {
   background-image: url(/images/overlay-1.gif);
   z-index: 9001;
-  opacity: 0.2;
+  opacity: 0.15;
 }
 
 #overlay-2 {
   background-image: url(/images/overlay-2.gif);
   z-index: 9002;
+}
+
+#overlay-3 {
+  background-image: url(/images/overlay-3.jpg);
+  opacity: 0.15;
+  z-index: 9000;
+}
+
+html.no-animation {
+  #overlay-1 {
+    background-image: url(/images/overlay-1@1x.jpg);
+  }
+
+  #overlay-2 {
+    background-image: url(/images/overlay-2@1x.jpg);
+  }
 }
 
 @import "/styles/animations.less";

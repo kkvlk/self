@@ -1,10 +1,42 @@
 #splash {
   display: block;
   height: 100vh;
+
+  h1 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0 0 0 1em;
+    padding: .6em 0 0 0;
+  }
 }
 
 @media screen and (min-width: 800px) {
   #splash {
-    margin-bottom: 4.6em;
+    margin-bottom: 10em;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+
+    video#headshot {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: auto;
+      width: 150vw;
+      z-index: -1;
+      transform: translateX(-50%) translateY(-50%);
+      background: @bg-color url(/images/headshot@05x.jpg) no-repeat;
+      background-position: center bottom;
+      background-size: cover;
+    }
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  #splash {
+    video#headshot {
+      width: 110vw;
+      background: @bg-color url(/images/headshot@1x.jpg) no-repeat;
+    }
   }
 }

@@ -1,3 +1,24 @@
+jQuery.fn.extend({
+  toggleVideo: function() {
+    var $video = $(this);
+
+    $video.each(function(_, video) {
+      if (video.paused == true) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    });
+  },
+  pauseVideo: function() {
+    var $video = $(this);
+
+    $video.each(function(_, video) {
+      video.pause();
+    });
+  }
+});
+
 $(function() {
   var hasLocalStorage = typeof(Storage) !== "undefined";
 
@@ -9,9 +30,11 @@ $(function() {
   $("a.toggle").click(function(event) {
     var $el = $(event.target);
     var $html = $("html");
+    var $video = $("video#headshot");
     var feature = $el.data("toggle");
 
     $html.toggleClass("no-" + feature);
+    $video.toggleVideo();
 
     if (hasLocalStorage) {
       localStorage.htmlClass = $html.attr("class");
@@ -24,7 +47,12 @@ $(function() {
   if (hasLocalStorage) {
     var htmlClass = localStorage.htmlClass;
     if (htmlClass !== undefined) {
-      $("html").addClass(htmlClass);
+      var $html = $("html");
+      $html.addClass(htmlClass);
+
+      if ($html.hasClass("no-animation")) {
+        $("video#headshot").pauseVideo();
+      }
     }
   }
 });
