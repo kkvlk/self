@@ -1,17 +1,27 @@
 html {
-  color: #111;
-  font-size: 24px;
+  color: #FFF;
+  background: #0A0C13;
+  font-size: 14px;
   line-height: 1.6;
+  font-family: "Kelly Slab", monospace;
 }
 
 ::-moz-selection {
-  background: #b3d4fc;
+  background: #999;
   text-shadow: none;
 }
 
 ::selection {
-  background: #b3d4fc;
+  background: #999;
   text-shadow: none;
 }
 
+@import "/styles/splash.less";
 @import "/styles/resume.less";
+@import "/styles/footer.less";
+
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 24px;
+  }
+}
