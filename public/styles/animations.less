@@ -315,7 +315,7 @@ html.no-animation {
     content: attr(data-text);
     display: block;
     position: absolute;
-    opacity: .5;
+    opacity: .3;
     top: 0;
     text-transform: uppercase;
     animation-iteration-count: infinite;
@@ -327,6 +327,7 @@ html.no-animation {
     animation-duration: 3s;
     animation-timing-function: cubic-bezier(.42, 0, .58, 1);
     color: @primary-neutral-color;
+    left: -5px;
   }
 
   &::before {
@@ -334,5 +335,6 @@ html.no-animation {
     animation-duration: 4s;
     animation-timing-function: cubic-bezier(.4,.9,.38,-1.02);
     color: @primary-dark-color;
+    left: 10px;
   }
 }
