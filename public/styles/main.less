@@ -1,5 +1,4 @@
-@bg-color: #0A0C13;
-@fg-color: #FFF;
+@import "/styles/themes/h4x0r.less";
 
 html {
   color: @fg-color;
@@ -19,8 +18,31 @@ body {
 }
 
 ::selection {
-  background: #999;
+  background: @primary-dark-color;
   text-shadow: none;
+}
+
+.overlay {
+  background-position: 0px 0px;
+  background-size: cover;
+  position: fixed;
+  z-index: 9000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: .1;
+}
+
+#overlay-1 {
+  background-image: url(/images/overlay-1.gif);
+  z-index: 9001;
+  opacity: 0.2;
+}
+
+#overlay-2 {
+  background-image: url(/images/overlay-2.gif);
+  z-index: 9002;
 }
 
 @import "/styles/animations.less";

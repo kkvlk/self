@@ -81,7 +81,23 @@
     margin-bottom: 2em;
     margin-left: 45px;
     box-sizing: border-box;
-    border-left: 8px solid #FFF;
+    border-left: 8px solid @fg-color;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      border-left: 8px solid @primary-dark-color;
+      left: -8px;
+      top: 5px;
+      bottom: 0;
+      width: 100vh;
+      z-index: -1;
+      animation-name: glitch-timeline-shadow;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+    }
 
     position {
       transform: translateY(-4.6em);
@@ -108,11 +124,19 @@
       }
 
       &::after {
-        border: 8px solid #FFF;
+        border: 8px solid @fg-color;
       }
 
       &::before {
         transform: translateY(-2px);
+      }
+    }
+  }
+
+  html.no-animation {
+    #resume {
+      &::after {
+        display: none !important;
       }
     }
   }

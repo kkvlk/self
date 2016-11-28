@@ -4,12 +4,12 @@
     border-color: @fg-color;
   }
   23% {
-    color: green;
-    border-color: green;
+    color: @primary-dark-color;
+    border-color: @primary-dark-color;
   }
   24% {
-    color: lime;
-    border-color: lime;
+    color: @primary-neutral-color;
+    border-color: @primary-neutral-color;
   }
   26% {
     color: @fg-color;
@@ -20,8 +20,8 @@
     border-color: @fg-color;
   }
   34% {
-    color: lightgreen;
-    border-color: lightgreen;
+    color: @primary-light-color;
+    border-color: @primary-light-color;
   }
   36% {
     transform: skew(0) translate(0, 0);
@@ -39,8 +39,8 @@
     transform: skew(0);
   }
   45% {
-    color: lightgreen;
-    border-color: lightgreen;
+    color: @primary-light-color;
+    border-color: @primary-light-color;
   }
   46% {
     color: @fg-color;
@@ -51,12 +51,12 @@
     border-color: @fg-color;
   }
   60% {
-    color: green;
-    border-color: green;
+    color: @primary-dark-color;
+    border-color: @primary-dark-color;
   }
   64% {
-    color: green;
-    border-color: green;
+    color: @primary-dark-color;
+    border-color: @primary-dark-color;
     transform: translate(0, 0);
   }
   65% {
@@ -84,12 +84,12 @@
     border-color: @fg-color;
   }
   96% {
-    color: lime;
-    border-color: lime;
+    color: @primary-neutral-color;
+    border-color: @primary-neutral-color;
   }
   99% {
-    color: lime;
-    border-color: lime;
+    color: @primary-neutral-color;
+    border-color: @primary-neutral-color;
   }
   100% {
     color: @fg-color;
@@ -257,11 +257,53 @@
   }
 }
 
+@keyframes glitch-timeline-shadow {
+  0% {
+    left: -15px;
+  }
+  20% {
+    left: 0px;
+  }
+  30% {
+    opacity: 1
+    left: 1px;
+  }
+  31% {
+    opacity: .5;
+    left: -5px;
+  }
+  35% {
+    opacity: .7;
+    left: -5px;
+  }
+  36% {
+    left: -2px;
+  }
+  61% {
+    opacity: 1;
+  }
+  90% {
+    opacity: .5;
+  }
+  95% {
+    opacity: .7;
+  }
+  100% {
+    opacity: 1;
+    border-width: 8px;
+    left: -12px;
+  }
+}
+
 html.no-animation {
   *,
   *::before,
   *::after {
     animation-name: none !important;
+  }
+
+  .overlay {
+    background: transparent !important;
   }
 }
 
@@ -288,13 +330,13 @@ html.no-animation {
     animation-name: glitch-left;
     animation-duration: 3s;
     animation-timing-function: cubic-bezier(.42, 0, .58, 1);
-    color: lime;
+    color: @primary-neutral-color;
   }
 
   &::before {
     animation-name: glitch-right;
     animation-duration: 4s;
     animation-timing-function: cubic-bezier(.4,.9,.38,-1.02);
-    color: green;
+    color: @primary-dark-color;
   }
 }
