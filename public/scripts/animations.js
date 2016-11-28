@@ -1,5 +1,5 @@
 jQuery.fn.extend({
-  toggleVideo: function() {
+  toggleMedia: function() {
     var $video = $(this);
 
     $video.each(function(_, video) {
@@ -10,7 +10,7 @@ jQuery.fn.extend({
       }
     });
   },
-  pauseVideo: function() {
+  pauseMedia: function() {
     var $video = $(this);
 
     $video.each(function(_, video) {
@@ -30,11 +30,18 @@ $(function() {
   $("a.toggle").click(function(event) {
     var $el = $(event.target);
     var $html = $("html");
-    var $video = $("video#headshot");
     var feature = $el.data("toggle");
 
     $html.toggleClass("no-" + feature);
-    $video.toggleVideo();
+
+    switch (feature) {
+    case "music":
+      $("audio#bgmusic").toggleMedia();
+      break;
+    case "animation":
+      $("video#headshot").toggleMedia();
+      break;
+    }
 
     if (hasLocalStorage) {
       localStorage.htmlClass = $html.attr("class");
@@ -51,7 +58,10 @@ $(function() {
       $html.addClass(htmlClass);
 
       if ($html.hasClass("no-animation")) {
-        $("video#headshot").pauseVideo();
+        $("video#headshot").pauseMedia();
+      }
+      if ($html.hasClass("no-music")) {
+        $("audio#bgmusic").pauseMedia();
       }
     }
   }
