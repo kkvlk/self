@@ -1,0 +1,49 @@
+#resume {
+  position {
+    alias {
+      display: block;
+
+      &.acquired-by::before {
+        content: "Acquired by ";
+        display: inline;
+      }
+    }
+
+    timeline {
+      display: block;
+
+      & > end {
+        &::before {
+          content: " - ";
+          display: inline;
+        }
+      }
+    }
+
+    ul {
+      list-style-type: none;
+
+      li {
+        display: inline;
+
+        &:not(:last-child)::after {
+          content: ", ";
+          display: inline;
+        }
+
+        &:last-child::after {
+          content: ".";
+          display: inline;
+        }
+      }
+
+      &.locations {
+        li {
+          &:not(:last-child)::after {
+            content: "; ";
+          }
+        }
+      }
+    }
+  }
+}
