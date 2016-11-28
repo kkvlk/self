@@ -1,9 +1,16 @@
+@bg-color: #0A0C13;
+@fg-color: #FFF;
+
 html {
-  color: #FFF;
-  background: #0A0C13;
+  color: @fg-color;
+  background: @bg-color;
   font-size: 14px;
   line-height: 1.6;
   font-family: "Kelly Slab", monospace;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 ::-moz-selection {
@@ -16,6 +23,8 @@ html {
   text-shadow: none;
 }
 
+@import "/styles/animations.less";
+@import "/styles/controls.less";
 @import "/styles/splash.less";
 @import "/styles/resume.less";
 @import "/styles/footer.less";

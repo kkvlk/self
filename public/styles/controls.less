@@ -1,0 +1,47 @@
+.controls {
+  padding: .5em 1.2em;
+  text-align: right;
+
+  a {
+    opacity: .3;
+    text-transform: uppercase;
+    font-size: .6em;
+    color: @fg-color;
+    text-decoration: none;
+    transition: opacity 250ms, background 250ms;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.toggle {
+      text-decoration: none;
+      background: none;
+      border-radius: 3px;
+      background: @fg-color;
+      color: @bg-color;
+      dislay: inline-block;
+      padding: 3px 8px;
+      box-sizing: border-box;
+      border: 2px solid @fg-color;
+    }
+  }
+}
+
+html.no-animation {
+  .controls {
+    a.toggle[data-toggle="animation"] {
+      color: @fg-color;
+      background: transparent;
+    }
+  }
+}
+
+html.no-music {
+  .controls {
+    a.toggle[data-toggle="music"] {
+      color: @fg-color;
+      background: transparent;
+    }
+  }
+}
