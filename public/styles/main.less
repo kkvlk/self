@@ -46,6 +46,11 @@ html.no-animation {
   }
 }
 
+.vessel {
+  display: block;
+  padding: 0 2em 0 2em;
+}
+
 @import "/styles/animations.less";
 @import "/styles/controls.less";
 @import "/styles/splash.less";
@@ -69,6 +74,18 @@ a {
 @media screen and (min-width: 800px) {
   html {
     font-size: 24px;
+  }
+
+  .vessel {
+    padding: 0 45px 0 95px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .vessel {
+    max-width: 800px;
+    padding: 0;
+    margin: 0 auto;
   }
 }
 

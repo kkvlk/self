@@ -1,11 +1,15 @@
 .controls {
-  padding: .6em 1.2em;
+  padding: .8em 1.2em;
   text-align: right;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 99999;
+
+  > div {
+    margin-bottom: -.05em;
+  }
 
   a {
     opacity: .5;
@@ -14,7 +18,7 @@
     color: @fg-color;
     text-decoration: none;
     transition: opacity 250ms, background 250ms;
-    line-height: 1em;
+    line-height: 1.25em;
 
     &:hover {
       opacity: 1;
@@ -48,6 +52,16 @@ html.no-music {
     a.toggle[data-toggle="music"] {
       color: @fg-color;
       background: transparent;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .controls {
+    padding: .6em 1.2em;
+
+    > div {
+      margin-bottom: -.25em;
     }
   }
 }
