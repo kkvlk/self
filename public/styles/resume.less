@@ -168,3 +168,40 @@
     max-width: 900px;
   }
 }
+
+@media print {
+  #resume {
+    background: #FFF;
+    color: #111;
+    border: none;
+    margin-left: 0;
+
+    &::after {
+      display: none;
+    }
+
+    positions {
+      margin: 0;
+
+      position {
+        margin: 0;
+        padding-bottom: 0;
+
+        &::before,
+        &::after {
+          display: none;
+        }
+
+        h3 {
+          color: #111;
+          animation-name: none;
+
+          &::before,
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

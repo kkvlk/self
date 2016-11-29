@@ -18,6 +18,7 @@ a:visited {
 
 a[href]:after {
   content: " (" attr(href) ")";
+  text-decoration: none;
 }
 
 abbr[title]:after {
@@ -58,4 +59,12 @@ h3 {
 h2,
 h3 {
   page-break-after: avoid;
+}
+
+.no-print {
+  display: none;
+}
+
+.print-break {
+  page-break-after: always;
 }

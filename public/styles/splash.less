@@ -21,6 +21,10 @@
     background-position: center bottom;
     background-size: cover;
   }
+
+  #headshot-pic {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -42,6 +46,30 @@
     video#headshot {
       width: 110vw;
       background: @bg-color url(/images/headshot@1x.jpg) no-repeat;
+    }
+  }
+}
+
+@media print {
+  #splash {
+    h1 {
+      display: none;
+    }
+
+    video#headshot {
+      display: none;
+    }
+
+    #headshot-pic {
+      display: block;
+      width: 250px;
+      height: 300px;
+      overflow: hidden;
+      margin: 2em;
+
+      img {
+        transform: scale(2.5) translateY(28px);
+      }
     }
   }
 }
