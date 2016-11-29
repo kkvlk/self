@@ -3,7 +3,11 @@
   background: @fg-color;
   color: @bg-color;
   text-align: justify;
-  padding: 1em 5px 1em 5px;
+  padding: 2em 5px 1em 5px;
+
+  h4 {
+    margin-top: 0;
+  }
 }
 
 #resume {
@@ -48,6 +52,36 @@
         &::before {
           content: " to ";
           display: inline;
+        }
+      }
+    }
+
+    references {
+      display: block;
+      text-align: justify;
+
+      blockquote {
+        margin: 1.5em 1.5em;
+
+        author {
+          display: block;
+          text-align: right;
+          padding-right: 1.5em;
+          font-isze: 2em;
+        }
+
+        p {
+          padding: 1em 1.5em;
+          font-family: "Old Standard TT", serif;
+          line-height: 1.6em;
+          border-radius: 3px;
+          background: @fg-color;
+          color: @bg-color;
+        }
+
+        p,
+        author {
+          font-size: .7em;
         }
       }
     }
@@ -184,10 +218,18 @@
 }
 
 @media print {
+  #intro {
+    padding: 0 5px;
+    margin: 2em 0 4em 0;
+    font-size: .95em;
+  }
+
   #resume {
     background: #FFF;
     color: #111;
     border: none;
+    padding: 0;
+    margin-top: -3em;
     margin-left: 0;
 
     &::after {
@@ -199,7 +241,8 @@
 
       position {
         margin: 0;
-        padding-bottom: 0;
+        padding-top: 2em;
+        padding-bottom: 0em;
 
         &::before,
         &::after {
@@ -207,7 +250,7 @@
         }
 
         h3 {
-          color: #111;
+          color: #000;
           animation-name: none;
 
           &::before,

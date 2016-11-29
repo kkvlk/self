@@ -68,3 +68,11 @@ h3 {
 .print-break {
   page-break-after: always;
 }
+
+blockquote {
+  border: none;
+}
+
+blockquote p {
+  border: 1px solid #000;
+}
