@@ -51,6 +51,16 @@ html.no-animation {
   padding: 0 2em 0 2em;
 }
 
+.wrapper {
+  opacity: 0;
+  transition: opacity 2s;
+  transition-delay: 0.5s;
+}
+
+body.ready .wrapper {
+  opacity: 1;
+}
+
 @import "/styles/animations.less";
 @import "/styles/controls.less";
 @import "/styles/splash.less";

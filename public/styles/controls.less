@@ -6,6 +6,9 @@
   left: 0;
   right: 0;
   z-index: 99999;
+  opacity: 0;
+  transition: opacity 750ms;
+  transition-delay: 2.5s;
 
   > div {
     margin-bottom: -.05em;
@@ -34,6 +37,12 @@
       box-sizing: border-box;
       border: 1px solid @fg-color;
     }
+  }
+}
+
+body.ready {
+  .controls {
+    opacity: 1;
   }
 }
 

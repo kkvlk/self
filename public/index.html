@@ -4,13 +4,73 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <script type="text/javascript" src="/scripts/load.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Old+Standard+TT|Kelly+Slab|Keania+One" rel="stylesheet" type="text/css">
+    <style type="text/css">
+      #loader {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin-top: -2em;
+        z-index: 99999999;
+        transition: opacity 250ms;
+        transition-delay: 500ms;
+      }
+
+      #loader::before {
+        content: "LOADING";
+        position: absolute;
+        display: block;
+        padding: 1em 0;
+        right: 30%;
+        left: 30%;
+        top: 0;
+        opacity: .7;
+        font-size: .8em;
+        font-family: "Press Start 2P", "Courier", "Courier New", monospace;
+        color: #10FF44;
+        text-align: center;
+        animation-name: animate-loader !important;
+        animation-duration: 500ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      body.ready #loader {
+        opacity: 0;
+      }
+
+      body.ready #loader::before {
+        content: "¡READY!" !important;
+        animation-name: none !important;
+      }
+
+      @keyframes animate-loader {
+        0% {
+          content: "L0AD1Ng";
+        }
+        20% {
+          content: "lo4DIN6";
+        }
+        40% {
+          content: "Lo4d1n6";
+        }
+        60% {
+          content: "L04D1nG";
+        }
+        80% {
+          content: "l0AdiN6";
+        }
+      }
+    </style>
     <link href="/styles/normalize.css" rel="stylesheet" type="text/css">
     <link href="/styles/main.less" rel="stylesheet/less" type="text/css">
     <link href="/styles/print.css" media="print" rel="stylesheet" type="text/css">
     <title>Welcome to the Abyss...</title>
   </head>
   <body>
+    <div id="loader"></div>
     <div class="wrapper">
       <header id="splash" role="banner" class="print-break">
         <div class="controls">
@@ -18,14 +78,16 @@
           <div><a href="#" class="toggle" data-toggle="music">Music</a></div>
         </div>
         <div class="vcard">
-          <h1>kkvlk</h1>
-          <ul id="info">
-            <li class="fn">
-              <span class="given-name">Krzysztof</span> <span class="family-name">Kowalik</span> a.k.a Kris Kovalik</li>
-            <li class="type">Hacker, Artist, Skater, Nomad</li>
-            <li class="birthday">Born in 1988, in Poland</li>
-            <li class="adr">Currently in <span class="locality">Madrid</span>, <span class="country-name">Spain</span></li>
-          </ul>
+          <div class="print-float">
+            <h1>kkvlk</h1>
+            <ul id="info">
+              <li class="fn">
+                <span class="given-name">Krzysztof</span> <span class="family-name">Kowalik</span> <span class="aka">a.k.a Kris Kovalik</span></li>
+              <li class="type">Hacker, Artist, Skater, Nomad</li>
+              <li class="birthday">Born in 1988, in Poland</li>
+              <li class="adr">Currently in <span class="locality">Madrid</span>, <span class="country-name">Spain</span></li>
+            </ul>
+          </div>
           <div id="headshot-pic">
             <img src="/images/headshot@05x.jpg" alt="" class="photo">
           </div>
@@ -288,7 +350,7 @@
               <references>
                 <blockquote>
                   <p>Kris is a broadly experienced engineer and a good problem solver. He almost always has something to contribute to a discussion or product. Often he has a suggestion that no one else thought of, and which opens up new options. Although I've mostly worked with him on specific products and technologies, it's clear that there are a lot of tools in his toolbelt and he quickly identifies good ones to use for various problems. Kris is eager to learn new things. He doesn't posture or engage in politics, and he gives direct, clear feedback.</p>
-                  <author>Baron Schwartz &middot; <span class="handle">@xaprb</span> &middot; Co-Founder of VividCortex</author>
+                  <author>Baron Schwartz &middot; <span class="handle">@xaprb</span> &middot; Co-Founder</author>
                 </blockquote>
               </references>
             </position>
@@ -320,9 +382,9 @@
                 </ul>
               </header>
               <summary>
-                <p>Five hundred millions of real estate records, with real time, corellative search. Weekly updates from multiple sources. Greedy API consumers. That was the challenge in a nutshell.</p>
+                <p>Five hundred millions of real estate records with real time, corellative search, plus weekly updates from multiple sources, plus greedy API consumers. That was the challenge in a nutshell.</p>
                 <p>We inherited a PHP app, tons of fixed-width data files, and constantly crashing MySQL server. We ended up with RESTful API handled by Java on Google App Engine, Elasticsearch cluster serving corellation queries, BigTable and Data Pipelines processing the updates, and sharded, redundant MySQL databases serving the data in real time.</p>
-                <p>This system, despite dealing with boring real estate data, was by far my biggest challenge, and most valuable production experience so far. It was undeniably the biggest one as well.</p>
+                <p>This system, despite dealing with boring real estate data, was by far my biggest challenge, and most valuable production experience in my career.</p>
               </summary>
             </position>
             <position class="print-break">

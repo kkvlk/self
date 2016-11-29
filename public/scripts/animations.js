@@ -72,5 +72,5 @@ $(function() {
     var $toggler = $("a.toggle[data-toggle='animation']")
     $toggler.click();
     $toggler.click();
-  }, 1000);
+  }, 60000);
 });
