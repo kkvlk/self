@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Kelly+Slab|Keania+One" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT|Kelly+Slab|Keania+One" rel="stylesheet" type="text/css">
     <link href="/styles/normalize.css" rel="stylesheet" type="text/css">
     <link href="/styles/main.less" rel="stylesheet/less" type="text/css">
     <link href="/styles/print.css" media="print" rel="stylesheet" type="text/css">
@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <header id="splash" role="banner">
+      <header id="splash" role="banner" class="print-break">
         <div class="controls">
           <div><a href="#" class="toggle" data-toggle="animation">Animation</a></div>
           <div><a href="#" class="toggle" data-toggle="music">Music</a></div>
@@ -22,14 +22,14 @@
           <img src="/images/headshot@05x.jpg" alt="">
         </div>
         <video playsinline autoplay muted loop poster="/images/headshot@1x.jpg" id="headshot">
-          <!-- <source src="/videos/headshot.webm" type="video/webm"> -->
           <source src="/videos/headshot.mp4#2" type="video/mp4">
         </video>
       </header>
       <div role="main">
         <section id="intro">
           <div class="vessel">
-            <p>Greetings. My name is Krzysztof, though feel free to call me Kris. I was born in post-soviet Poland, however, over the course of my life I became a nomad. I jump from place to place every now and then to learn more about the World. So far I managed to stay a little longer in Buenos Aires, Berlin, Seoul, Madrid and my beloved Montevideo.</p>
+            <h4>Greetings!</h4>
+            <p>My name is Krzysztof, though feel free to call me Kris. I was born in post-soviet Poland, however, over the course of my life I became a nomad. I jump from place to place every now and then to learn more about the World. So far I managed to stay a little longer in Buenos Aires, Berlin, Seoul, Madrid and my beloved Montevideo.</p>
             <p>As it comes to communication, I speak and write fluent English and Spanish from La Plata, not bad Spanish from Spain, native Polish and basic Russian. French, Finnish, Korean and Japanese are in my backlog.</p>
             <p>I met first computer when I was 11, it was a green iMac G3 at my primary school. I fell in love. I had to wait couple of years more for the first computer of my own. Once there, it did not take me long to discover programming and turn into a child of the internet.</p>
             <p>Throughout my programming career I did commercial projects in Ruby, Python, Java/Scala, Node, Go, C/C++, and even Perl. I'm fluent with web technologies, including websockets, streaming and animations. Databases? You name it. I did consulting in PostrgeSQL, MySQL, Elasticsearch, BigTable and Redis, I am also familiar with Dynamo, Riak, and RethinkDB. I spent over ten years exploring nuisances of Linux, starting from Gentoo, through Red Hat, on Debian finishing. I have experience with BSD family as well. At work, as well as in my life I devotedly follow UNIX philosophy.</p>
@@ -65,7 +65,7 @@
                 </ul>
               </header>
               <summary>
-                <p>I started earning money with code when I was 16. I wrote scraping scripts and dummy websites, I was setting servers up for web. Later on, I have learned MySQL, which gave me opportunity to work on more interesting data analysis projects.</p>
+                <p>I started earning money and experience with code when I was 16. I wrote scraping scripts and dummy websites, I was setting servers up for web. Later on, I have learned MySQL, which gave me opportunity to work on more interesting data analysis projects.</p>
               </summary>
             </position>
             <position class="fun print-break">
@@ -85,6 +85,12 @@
               <summary>
                 <p>This one is funny. I was working as a librarian and secretary assistant in my hometown's Primary School. It was my first official job. I loved the library. The work was easy and I had plenty of time to read dozens of books. I was an avid reader already, but that job turned me into a complete book worm.</p>
               </summary>
+              <references>
+                <blockquote>
+                  <p>Krzysztof took good care of our library. (...) He was always eager when his service was needed, and he scrupulously did all assigned tasks.</p>
+                  <author>Adam Olszewski &middot; Principal</author>
+                </blockquote>
+              </references>
             </position>
             <position>
               <header>
@@ -123,6 +129,12 @@
               <summary>
                 <p>There was, however, one thing I was lucky to find at the university. During the first weeks of classes I discovered AIESEC - student organisation run by students themselves. They took me in, they thought me valuable information about the world, about people, about collaboration, and about making positive changes.</p>
               </summary>
+              <references>
+                <blockquote>
+                  <p>Thank you for bringing fresh air of creativity and positive changes into our team.</p>
+                  <author>AIESEC Kielce &middot; Commitee Recognition Award</author>
+                </blockquote>
+              </references>
             </position>
             <position class="print-break">
               <header>
@@ -153,6 +165,12 @@
                 <p>This project was in fact primary reason to drop out of school. I have acquainted a group of enthusiastic people through AIESEC and Technology Incubators, and we decided to team up in our freelance projects. We started well, we were full of ideas and dreams, we had few loyal clients. However, in the long run, we had no idea what we are doing. Expected as it was, the company went belly up after a year of activity.</p>
                 <p>Regardless the outcome, it was incredibly valuable experience to me. I have masterd Ruby and Rails to perfection. I had occasion to work with GPS systems. I had a glimpse of how search engines and SEO work. Last but not least, I deployed my very first distributed app - oh my, it was a Rails app scaled on three separate servers - madness!</p>
               </summary>
+              <references>
+                <blockquote>
+                  <p>Kris knows his way around code and gets shit done. Working together was a pleasure.</p>
+                  <author>Pawel Zardzewialy &middot; Co-Founder</author>
+                </blockquote>
+              </references>
             </position>
             <position class="print-break">
               <header>
@@ -185,6 +203,12 @@
                 <p>I started there as Rails developer - working mostly on apps for commerce, and loyality programs. However, I quickly got the opportunity to work with number of technologies. Discovering no-SQL databases was at the time the biggest breakthrough in my career. Later, I had a chance to work with heavily distributed message queues as well as a real misfortune to have a MongoDB in production... in 2010...</p>
                 <p>We had fantastic time at Araneo. We had purpose, we had fun, we supported each other, and we made some really good apps. Even though the company does not exist anymore, we stay friends. R.I.P. Araneo, and thank you for everything.</p>
               </summary>
+              <references>
+                <blockquote>
+                  <p>Kris is an awesome, highly skilled and professional developer. Programming is his passion and as everything created with passion his projects shines like truly diamonds (uhm... I mean rubies).</p>
+                  <author>Kamil Dziedzic &middot; <span class="handle">@arvenil</span> &middot; Coworker</author>
+                </blockquote>
+              </references>
             </position>
             <position class="print-break">
               <header>
@@ -217,6 +241,16 @@
                 <p>Prior to joining Cubox I struggled with health issues and complications after the surgery. It was then I decided to go nomad, silence my fears and go places. Series of funny events connected me with the guys at Montevideo.</p>
                 <p>Working at Cubox opened my eyes to software crafsmanship. We did awesome apps for cool clients, we grew together, we had fun doing it. We wrote open source during the working hours! We went to conferences, we organised conferences. Cubox thought me true culture of hacking. For this, and everything they did for me, I shall be always greatful.</p>
               </summary>
+              <references>
+                <blockquote>
+                  <p>Kris is a smart and pragmatic developer, capable of turning ideas into simple and maintainable code.</p>
+                  <author>Nicolas Sanguinetti &middot; <span class="handle">@foca</span> &middot; Coworker</author>
+                </blockquote>
+                <blockquote>
+                  <p>Kris takes programming seriously. Not only he is a very skilled developer -I have witnessed him building a pretty complex web app from the scratch and delivering it in a couple of days-, he is always concerned about the quality of his work, and prompt to share his knowledge with others.</p>
+                  <author>Gustavo Armagno Haag &middot; <span class="handle">@gusaaaaa</span> &middot; Coworker</author>
+                </blockquote>
+              </references>
             </position>
             <position class="print-break">
               <header>
@@ -242,6 +276,12 @@
                 <p>TL;DR: Building MySQL metrics collector in Go, failing at devops, trolling with pictures of cats.</p>
                 <p>Looking at my work from perspective, I am indeed ashamed of my results. I consider this time a black hole in my career, time completely wasted on being proud, all-knowing arsehole. Well, hindsite is 20/20, is it not?</p>
               </summary>
+              <references>
+                <blockquote>
+                  <p>Kris is a broadly experienced engineer and a good problem solver. He almost always has something to contribute to a discussion or product. Often he has a suggestion that no one else thought of, and which opens up new options. Although I've mostly worked with him on specific products and technologies, it's clear that there are a lot of tools in his toolbelt and he quickly identifies good ones to use for various problems. Kris is eager to learn new things. He doesn't posture or engage in politics, and he gives direct, clear feedback.</p>
+                  <author>Baron Schwartz &middot; <span class="handle">@xaprb</span> &middot; Co-Founder of VividCortex</author>
+                </blockquote>
+              </references>
             </position>
             <position class="print-break">
               <header>
@@ -312,6 +352,12 @@
               <summary>
                 <p>You are probably wondering what the heck is this suppose to mean? Well, I discovered rollerblading when I was 20, some time later I started breaking my bones on Freestyle Slalom. Last year, after long rehab and recovery from the injury, I went berserk with training. I took a career break to compete in slalom series of Paris, Moscow, Namwon, Qingdao and Warsaw. I finished the season ranked 21 in the World. No, it has nothing to do with programming, but it shows what am I capable of when motivated and cut loose.</p>
                 <p class="no-print">If you feel like wasting time on youtube weirdness, you can check one of my <a target="_blank" href="https://www.youtube.com/watch?v=8p7WCMHlh2A">roller-dancing videos</a>.</p>
+                <references>
+                  <blockquote>
+                    <p>Kris is a very good skater, and also a great slalom coach, he transmits his passion he feels for this discipline very well.</p>
+                    <author>Natalia Aguero &middot; Trainee</author>
+                  </blockquote>
+                </references>
               </summary>
             </position>
             <position>
