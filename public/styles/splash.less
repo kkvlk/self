@@ -8,6 +8,19 @@
     margin: 0 0 0 1em;
     padding: .6em 0 0 0;
   }
+
+  video#headshot {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    height: auto;
+    width: 150vw;
+    z-index: -1;
+    transform: translateX(-50%) translateY(55%);
+    background: @bg-color url(/images/headshot@03x.jpg) no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -18,16 +31,8 @@
     overflow: hidden;
 
     video#headshot {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      height: auto;
-      width: 150vw;
-      z-index: -1;
-      transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(50%);
       background: @bg-color url(/images/headshot@05x.jpg) no-repeat;
-      background-position: center bottom;
-      background-size: cover;
     }
   }
 }
