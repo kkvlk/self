@@ -5,11 +5,17 @@ html {
   background: @bg-color;
   font-size: 18px;
   line-height: 1.6;
-  font-family: "Kelly Slab", monospace;
+  font-family: @regular-font;
+  zoom: 100%;
 }
 
 body {
   overflow-x: hidden;
+}
+
+html, body {
+  min-height: 100%;
+  height: 100%;
 }
 
 ::-moz-selection {

@@ -1,14 +1,16 @@
 #splash {
   display: block;
-  height: 100vh;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
 
   h1 {
     font-size: 1em;
     font-weight: normal;
-    margin: 3px 0 0 1em;
+    margin: 6px 0 0 1.2em;
     padding: .8em 0 0 22px;
     position: relative;
-    font-family: "Press Start 2P", monospace;
+    font-family: @header-font;
     .mini-glitch;
 
     &::before {
@@ -39,9 +41,11 @@
     list-style-type: none;
     padding: 0;
     margin: 0 1em;
+    position: relative;
+    z-index: 1;
 
     li {
-      font-size: .7em;
+      font-size: .6em;
       padding-left: 22px;
     }
   }
@@ -69,19 +73,12 @@
 
   video#headshot {
     position: absolute;
-    bottom: 50%;
-    left: 50%;
-    height: auto;
-    width: 150vw;
+    width: 180%;
     z-index: -1;
-    transform: translateX(-50%) translateY(55%);
-    background: @bg-color url(/images/headshot@03x.jpg) no-repeat;
-    background-position: center bottom;
-    background-size: cover;
-  }
-
-  #headshot-pic {
-    display: none;
+    background: @bg-color;
+    transform: translateX(-50%);
+    bottom: 1em;
+    left: 50%;
   }
 }
 
@@ -99,13 +96,16 @@ body.ready {
   }
 }
 
+@media screen and (min-width: 480px) {
+  #splash {
+    video#headshot {
+      width: 140%;
+    }
+  }
+}
+
 @media screen and (min-width: 800px) {
   #splash {
-    margin-bottom: 10em;
-    height: 100vh;
-    display: block;
-    overflow: hidden;
-
     h1 {
       padding: .6em 0 0 30px;
     }
@@ -117,8 +117,23 @@ body.ready {
     }
 
     video#headshot {
-      transform: translateX(-50%) translateY(50%);
-      background: @bg-color url(/images/headshot@05x.jpg) no-repeat;
+      width: 120%;
+    }
+  }
+}
+
+@media screen and (min-width: 568px) and (orientation: landscape) {
+  #splash {
+    video#headshot {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (min-width: 960px) and (orientation: landscape) {
+  #splash {
+    video#headshot {
+      width: 100%;
     }
   }
 }
@@ -126,11 +141,35 @@ body.ready {
 @media screen and (min-width: 1080px) {
   #splash {
     video#headshot {
-      width: 110vw;
-      background: @bg-color url(/images/headshot@1x.jpg) no-repeat;
+      width: 100%;
     }
   }
 }
+
+@media screen and (min-width: 1280px) {
+  #splash {
+    video#headshot {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  #splash {
+    video#headshot {
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  #splash {
+    video#headshot {
+      width: 70%;
+    }
+  }
+}
+
 
 @media print {
   #splash {

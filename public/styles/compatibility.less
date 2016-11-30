@@ -4,9 +4,6 @@
   }
 }
 
-.no-opacity,
-.no-cssvhunit,
-.no-cssvwunit,
 .no-csstransforms,
 .no-mediaqueries,
 .no-bgsizecover {
@@ -16,5 +13,18 @@
 
   oldbrowser {
     display: block;
+  }
+}
+
+.no-opacity {
+  .overlay {
+    display: none;
+  }
+
+  h1, h3, h4 {
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 }

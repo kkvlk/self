@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <script type="text/javascript" src="/scripts/load.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Old+Standard+TT|Kelly+Slab" rel="stylesheet" type="text/css">
@@ -84,7 +84,7 @@
       <strong>Error</strong>! Your browser does not support JavaScript.
     </noscript>
     <oldbrowser>
-      <strong>Error</strong>! Your browser is too old.
+      <strong>Error</strong>! Your browser cannot handle awesomeness of this website.
     </oldbrowser>
     <div id="loader"></div>
     <div class="wrapper">
@@ -94,7 +94,7 @@
           <div><a href="#" class="toggle" data-toggle="music">Music</a></div>
         </div>
         <div class="vcard">
-          <div class="print-float">
+          <div id="top" class="print-float">
             <h1>kkvlk</h1>
             <ul id="info">
               <li class="fn">
@@ -104,10 +104,7 @@
               <li class="adr">Currently in <span class="locality">Madrid</span>, <span class="country-name">Spain</span></li>
             </ul>
           </div>
-          <div id="headshot-pic">
-            <img src="/images/headshot@05x.jpg" alt="" class="photo">
-          </div>
-          <video playsinline autoplay muted loop id="headshot">
+          <video playsinline autoplay muted loop poster="/images/headshot@1x.jpg" id="headshot">
             <source src="/videos/headshot.mp4#2" type="video/mp4">
           </video>
         </div>
