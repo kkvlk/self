@@ -22,7 +22,7 @@ jQuery.fn.extend({
 $(function() {
   var hasLocalStorage = typeof(Storage) !== "undefined";
 
-  $("#resume position h3, #splash h1").each(function(_, el) {
+  $("h1, h3, h4, #email").each(function(_, el) {
     var $el = $(el);
     $el.attr("data-text", $el.text());
   });
