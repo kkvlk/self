@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <script type="text/javascript" src="/scripts/load.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Old+Standard+TT|Kelly+Slab|Keania+One" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Old+Standard+TT|Kelly+Slab" rel="stylesheet" type="text/css">
     <script src="/scripts/modernizr.js" type="text/javascript"></script>
     <style type="text/css">
       #loader {
-        position: absolute;
+        position: fixed;
         top: 50%;
         left: 0;
         right: 0;
@@ -29,7 +29,7 @@
         top: 0;
         opacity: .7;
         font-size: .8em;
-        font-family: "Press Start 2P", "Courier", "Courier New", monospace;
+        font-family: "Press Start 2P", "Courier New", "Courier", monospace;
         color: #10FF44;
         text-align: center;
         animation-name: animate-loader !important;
@@ -64,13 +64,27 @@
           content: "l0AdiN6";
         }
       }
+
+      noscript,
+      oldbrowser {
+        display: none;
+        color: #EE66AA;
+        font-family: "Kelly Slab", "Courier New", "Courier", monospace;
+        font-size: 1.5em;
+        margin: 1em 1.5em;
+      }
     </style>
     <link href="/styles/normalize.css" rel="stylesheet" type="text/css">
-    <link href="/styles/main.less" rel="stylesheet/less" type="text/css">
-    <link href="/styles/print.css" media="print" rel="stylesheet" type="text/css">
+    <link href="/styles/main.css" rel="stylesheet" type="text/css">
     <title>Welcome to the Abyss...</title>
   </head>
   <body>
+    <noscript>
+      <strong>Error</strong>! Your browser does not support JavaScript.
+    </noscript>
+    <oldbrowser>
+      <strong>Error</strong>! Your browser is too old.
+    </oldbrowser>
     <div id="loader"></div>
     <div class="wrapper">
       <header id="splash" role="banner" class="print-break">
@@ -92,7 +106,7 @@
           <div id="headshot-pic">
             <img src="/images/headshot@05x.jpg" alt="" class="photo">
           </div>
-          <video playsinline autoplay muted loop poster="/images/headshot@1x.jpg" id="headshot">
+          <video playsinline autoplay muted loop id="headshot">
             <source src="/videos/headshot.mp4#2" type="video/mp4">
           </video>
         </div>
@@ -477,7 +491,6 @@
       <source src="/music/satelite-one-by-purple-motion.mp3" type="audio/mpeg">
     </audio>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.min.js"></script>
     <script type="text/javascript" src="/scripts/animations.js"></script>
   </body>
 </html>

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd public/styles
+lessc --compress main.less > main.css

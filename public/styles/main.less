@@ -1,4 +1,4 @@
-@import "/styles/themes/h4x0r.less";
+@import "themes/h4x0r.less";
 
 html {
   color: @fg-color;
@@ -35,14 +35,14 @@ body {
 }
 
 #overlay-1 {
-  background-image: url(/images/overlay-1a.gif);
-  opacity: 0.2;
+  background-image: url(/images/overlay-1.gif);
+  opacity: 0.1;
   z-index: 9000;
 }
 
 html.no-animation {
   #overlay-1 {
-    background-image: url(/images/overlay-1a@1x.jpg);
+    background-image: url(/images/overlay-1@1x.jpg);
   }
 }
 
@@ -61,12 +61,6 @@ body.ready .wrapper {
   opacity: 1;
 }
 
-@import "/styles/animations.less";
-@import "/styles/controls.less";
-@import "/styles/splash.less";
-@import "/styles/resume.less";
-@import "/styles/footer.less";
-
 a {
   color: @primary-neutral-color;
   position: relative;
@@ -80,6 +74,13 @@ a {
     text-decoration: underline;
   }
 }
+
+@import "compatibility.less";
+@import "animations.less";
+@import "controls.less";
+@import "splash.less";
+@import "resume.less";
+@import "footer.less";
 
 @media screen and (min-width: 800px) {
   html {
@@ -109,3 +110,5 @@ a {
     display: none;
   }
 }
+
+@import "print.less";
