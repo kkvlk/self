@@ -1,13 +1,27 @@
-#intro {
-  min-height: 100vh;
+#intro, #next {
   background: @fg-color;
   color: @bg-color;
   text-align: justify;
   padding: 2em 5px 1em 5px;
 
-  h4 {
+  h3, h4 {
     margin-top: 0;
+    text-transform: uppercase;
+    font-family: "Press Start 2P", monospace;
   }
+
+  h3 {
+    margin-bottom: .8em;
+  }
+
+  h4 {
+    font-size: 1.3em;
+    margin-bottom: 1em;
+  }
+}
+
+#next {
+  margin-top: -2em;
 }
 
 #resume {
@@ -119,8 +133,15 @@
   }
 }
 
+#next {
+  h3 {
+    text-transform: uppercase;
+    font-size: 1.6em;
+  }
+}
+
 @media screen and (min-width: 800px) {
-  #intro {
+  #intro, #next {
     padding: 3em 55px 3em 5px;
   }
 
@@ -193,23 +214,18 @@
 }
 
 @media screen and (min-width: 1000px) {
-  #intro {
-    padding-top: 6em;
-    padding-bottom: 6em;
-    padding-right: 5px;
+  #intro, #next, #resume {
+    padding: 6em 0;
   }
 
   #resume {
-    padding-top: 6em;
-    padding-bottom: 6em;
-    padding-right: 5px;
     margin: 0 auto;
     max-width: 900px;
   }
 }
 
 @media print {
-  #intro {
+  #intro, #next {
     padding: 0 5px;
     margin: 2em 0 4em 0;
     font-size: .95em;

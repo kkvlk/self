@@ -1,8 +1,7 @@
 #footer {
   min-height: 100vh;
-  background: @fg-color;
+  background: @primary-dark-color;
   color: @bg-color;
-  margin-top: -2em;
 }
 
 #credits {
@@ -59,5 +58,11 @@
     h4, ul {
       padding: 0 5px;
     }
+  }
+}
+
+@media print {
+  #credits {
+    display: none;
   }
 }
