@@ -1,7 +1,32 @@
 #footer {
-  min-height: 100vh;
   background: @primary-dark-color;
   color: @bg-color;
+  padding: 2em 0;
+  position: relative;
+
+  #contact {
+    social {
+      display: block;
+
+      a {
+        color: @bg-color;
+
+        &:hover {
+          color: @primary-neutral-color;
+          text-decoration: none;
+        }
+      }
+    }
+
+    #email {
+      font-family: "Press Start 2P", monospace;
+      margin-bottom: 1em;
+
+      span {
+        font-size: 1.25em;
+      }
+    }
+  }
 }
 
 #credits {
@@ -42,6 +67,36 @@
 }
 
 @media screen and (min-width: 800px) {
+  #footer {
+    padding: 6em 0 6.5em 0;
+
+    #contact {
+      social {
+        display: inline-block;
+
+        &::before {
+          content: "\00b7\00a0";
+          display: inline;
+        }
+
+        &#twitter {
+          &::before {
+            display: none;
+          }
+        }
+      }
+
+      #email {
+        display: block;
+        margin-bottom: .4em;
+
+        span {
+          font-size: 1.8em;
+        }
+      }
+    }
+  }
+
   #credits {
     padding: 2em 0;
 
