@@ -295,6 +295,91 @@
   }
 }
 
+@keyframes mini-glitch {
+  21% {
+    opacity: 1;
+    color: inherit;
+  }
+  23% {
+    opacity: .8;
+    color: @primary-neutral-color;
+  }
+  24% {
+    opacity: .8;
+    color: @primary-neutral-color;
+  }
+  26% {
+    opacity: 1;
+    color: inherit;
+  }
+  33% {
+    opacity: 1;
+  }
+  34% {
+    opacity: .9;
+  }
+  36% {
+    opacity: 1;
+    transform: skew(0) translate(0, 0);
+  }
+  37% {
+    transform: skew(3deg) translate(-1px, -2px);
+  }
+  38% {
+    transform: skew(3deg) translate(-1px, -2px);
+  }
+  40% {
+    transform: skew(4deg) translate(0, 0);
+  }
+  41% {
+    transform: skew(0);
+  }
+  55% {
+    opacity: 1;
+  }
+  60% {
+    opacity: .7;
+  }
+  64% {
+    opacity: .8;
+  }
+  65% {
+    opacity: .4;
+  }
+  67% {
+    opacity: .4;
+    color: inherit;
+  }
+  68% {
+    opacity: 1;
+    color: @primary-dark-color;
+    transform: translate(0, 0);
+  }
+  72% {
+    color: @primary-dark-color;
+    transform: skew(0);
+  }
+  73% {
+    color: inherit;
+    transform: skew(2deg);
+  }
+  75% {
+    transform: skew(0);
+  }
+  93% {
+    opacity: 1;
+  }
+  96% {
+    opacity: .8;
+  }
+  99% {
+    opacity: .8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 html.no-animation {
   *,
   *::before,
@@ -337,6 +422,14 @@ html.no-animation {
     color: @primary-dark-color;
     left: 10px;
   }
+}
+
+.mini-glitch {
+  position: relative;
+  z-index: 1;
+  animation-name: mini-glitch;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
 }
 
 .blink-load {
