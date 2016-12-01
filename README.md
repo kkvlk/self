@@ -24,7 +24,7 @@ I was raised by post-soviet 90s, which were pretty much like 80s on steroids. Co
     ./serve
     ```
 
-    Once up, http://localhost:5000/ shall serve the website.
+    Once up, [localhost:5000](http://localhost:5000/) shall serve the website.
 
 ## License
 
